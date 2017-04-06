@@ -42,13 +42,14 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
-group :production do  
-	gem 'pg', '0.18.4' 
-end
-
 group :development, :test do  
 	gem 'sqlite3', '1.3.12'  
-	gem 'byebug',  '9.0.0', platform: :mri 
+	gem 'byebug', platform: :mri 
+end
+
+group :production do  
+	gem 'pg', '0.18.4'
+	gem 'rails_12factor', '0.0.2' 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
